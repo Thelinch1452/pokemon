@@ -1,0 +1,200 @@
+
+
+.poison {
+    background-color: #A040A0;
+    color: white;
+
+}
+
+.fire {
+    background-color: #f06630;
+    color: white;
+
+}
+
+.psychic {
+    background-color: #F85888;
+    color: white;
+
+}
+
+.fighting {
+    background-color: #C03028;
+    color: white;
+
+}
+
+.rock {
+    background-color: #B8A038;
+    color: white;
+
+}
+
+.electric {
+    background-color: #F8D030;
+    color: white;
+
+}
+
+.steel {
+    background-color: #B8B8D0;
+    color: white;
+
+}
+
+.ice {
+    background-color: #98D8D8;
+    color: white;
+
+}
+
+.ghost {
+    background-color: #705898;
+    color: white;
+
+}
+
+.dragon {
+    background-color: #7038F8;
+    color: white;
+
+}
+
+.dark {
+    background-color: #705848;
+    color: white;
+
+}
+
+.ground {
+    background-color: #E0C068;
+    color: white;
+
+
+}
+
+.fairy {
+    background-color: #EE99AC;
+    color: white;
+
+}
+
+.bug {
+    background-color: #A8B820;
+    color: white;
+
+}
+
+.normal {
+    background-color: #A8A878;
+    color: white;
+
+}
+
+.flying {
+    background-color: #A890F0;
+    color: white;
+
+}
+
+.water {
+    background-color: #6890F0;
+    color: white;
+
+}
+
+.grass {
+    background-color: #78C850;
+    color: white;
+
+}
+.grass-light {
+    background-color:lighten($color: #78C850, $amount: 2.3)  ;
+    color: black;
+
+}
+.water-light {
+    background-color:lighten($color: #6890F0, $amount: 2.3)  ;
+    color: black;
+
+}
+.flying-light {
+    background-color:lighten($color: #A890F0, $amount: 2.3)  ;
+    color: black;
+
+}
+.normal-light {
+    background-color:lighten($color: #A8A878, $amount: 2.3)  ;
+    color: black;
+
+}
+.bug-light {
+    background-color:lighten($color: #A8B820, $amount: 2.3)  ;
+    color: black;
+
+}
+.fairy-light {
+    background-color:lighten($color: #EE99AC, $amount: 2.3)  ;
+    color: black;
+
+}
+.ground-light {
+    background-color:lighten($color: #E0C068, $amount: 2.3)  ;
+    color: black;
+
+}
+.dark-light {
+    background-color:lighten($color: #705848, $amount: 2.3)  ;
+    color: black;
+
+}
+.dragon-light {
+    background-color:lighten($color: #7038F8, $amount: 2.3)  ;
+    color: black;
+
+}
+.ghost-light {
+    background-color:lighten($color: #705898, $amount: 2.3)  ;
+    color: black;
+
+}
+.ice-light {
+    background-color:lighten($color: #98D8D8, $amount: 2.3)  ;
+    color: black;
+
+}
+.steel-light {
+    background-color:lighten($color: #B8B8D0, $amount: 2.3)  ;
+    color: black;
+
+}
+.electric-light {
+    background-color:lighten($color: #F8D030, $amount: 2.3)  ;
+    color: black;
+
+}
+.rock-light {
+    background-color:lighten($color: #B8A038, $amount: 2.3)  ;
+    color: black;
+
+}
+.fighting-light {
+    background-color:lighten($color: #C03028, $amount: 2.3)  ;
+    color: black;
+
+}
+.psychic-light {
+    background-color:lighten($color: #F85888, $amount: 2.3)  ;
+    color: black;
+
+}
+.fire-light {
+    background-color:lighten($color: #f06630, $amount: 2.3)  ;
+    color: black;
+
+}
+.poison-light {
+    background-color:lighten($color: #A040A0, $amount: 2.3)  ;
+    color: black;
+
+}

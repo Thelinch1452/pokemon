@@ -1,0 +1,39 @@
+<!-- 
+ -->
+<div class="pokemon-detalle {{pokemonDetalle.tipos[0]}}">
+    <audio [src]="pokemonDetalle.sonidoUrl" #sonido autoplay></audio>
+
+    <div class="pokemon-imagen">
+        <div class="pokemon-experiencia">
+
+        </div>
+        <img [src]="pokemonDetalle.urlFoto" [alt]="pokemonDetalle.nombre" width="100" height="100">
+
+    </div>
+    <div class="pokemon-info">
+        <div class="pokemon-nombre">
+            <h2>{{pokemon().nombre}}</h2>
+
+        </div>
+
+        @for(estadistica of pokemonDetalle.estadisticas;track estadistica){
+        <p class="pokemon-estadisticas">
+            <span class="bg-{{estadistica.nombre}}">{{estadistica.nombre}}</span>
+            <span>{{estadistica.valor}}</span>
+        </p>
+
+
+        }
+    </div>
+    <div class="pokemon-abecedario">
+        @for(letra of abecedarioVista;track letra.letra){
+
+        <div class="pokemon-abecedario-letra" [ngClass]="{'activado':letra.activado}">
+            <p>{{letra.letra}}</p>
+            <p>{{letra.ocurrencias}}</p>
+        </div>
+
+        }
+
+    </div>
+</div>

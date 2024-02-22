@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/components/pokemon';
+@import './app/components/form';
+@import './app/components/button';
+@import './app/components/tipos';
+@import './app/components/pokemon-detalle';
+
+@font-face {
+    font-family: pokemonSolid;
+    src: url("./assets/Pokemon Solid.ttf");
+}
+
+@font-face {
+    font-family: pokemon;
+    src: url("./assets/cold.otf");
+}
+
+body {
+    background-color: var(--color-gray);
+    min-height: 100vh;
+    scrollbar-width: thin;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+:root {
+    --bg-primary: gray;
+    --color-white: white;
+    --color-black: #1c1c1c;
+    --color-gray: #ececec;
+    --color-primario: #8b2286;
+    --color-secundario: #1d96ce;
+    --color-pokedex: #E91E21;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: pokemon;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+#back-top {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000035;
+    background: var(--color-primario);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    left: 50%;
+    width: 40rem;
+    transform: translate(-50%);
+    margin-top: 98vh;
+    position: sticky;
+    display: block;
+    bottom: 32px;
+}
+
+
+@media screen and (min-width: 470px) {
+    .container {
+        padding: 2rem 2rem;
+
+    }
+}
+
+/* @media screen and (min-width: 700px) {
+    .container {
+        padding: 2rem 10rem;
+    }
+}
+ */
+
+@media only screen and (max-width : 900px) {
+    #back-top {
+        transform: none !important;
+        width: 100% !important;
+
+    }
+}
+
+
+
+
+
+/* The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="form">
+        <input list="dataListPokemon" class="control" [(ngModel)]="nombre">
+        <select name="limite" id="limite" class="control" [(ngModel)]="limite">
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="100">100</option>
+        </select>
+        <button class="boton primario" type="button" [disabled]="cargandoListaPokemon"
+            (click)="paginacion({filtrar:true})">Buscar</button>
+    </div>
+
+
+    <h4>Actualmente {{pokemons.length}} capturados</h4>
+    <div class="pokemon-cuerpo">
+        <div class="pokemon-container" infiniteScroll [immediateCheck]='true' [infiniteScrollDistance]="0.6"
+            [infiniteScrollThrottle]="50" (scrolled)="paginacion({filtrar:false})">
+            <div class="pokemon-data">
+                @for(pokemon of pokemons;track pokemon.nombre){
+                <app-pokemon [pokemon]="pokemon" (seleccionarPokemon)="seleccionarPokemon($event)"></app-pokemon>
+                }
+                @if(pokemons.length==0 && !cargandoListaPokemon){
+                <p style="text-align: center;">Pokemones no encontrados</p>
+                }
+                @if(cargandoListaPokemon){
+                <div class="loader loader--style3" title="2" style="text-align: center;">
+                    <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px"
+                        viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <path fill="#000"
+                            d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z">
+                            <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25"
+                                to="360 25 25" dur="0.6s" repeatCount="indefinite" />
+                        </path>
+                    </svg>
+                </div>
+
+                }
+            </div>
+
+        </div>
+        @if(pokemonSeleccionado){
+        <div class="pokemon-detalle-container ">
+            <span class="close" (click)="pokemonSeleccionado=null">&times;</span>
+            <div class="pokemon-detalle-info">
+                <app-pokemon-detalle class="carta " [pokemon]="pokemonSeleccionado"
+                    [abecedarioD]="abecedarioD"></app-pokemon-detalle>
+            </div>
+
+
+        </div>
+        }
+    </div>
+
+
+    <datalist id="dataListPokemon">
+        @for(pokemon of pokemons;track pokemon.nombre){
+        <option value="{{pokemon.nombre}}">{{pokemon.nombre}}</option>
+        }
+    </datalist>
+</div>
+<a id="back-top" href='#top'>Volver</a>
